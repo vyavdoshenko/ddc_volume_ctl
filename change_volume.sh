@@ -14,9 +14,9 @@ readonly VOLUME=$(ddcutil getvcp ${VOLUME_CAPABILITY} | grep -oP '(?<=Volume lev
 
 echo Current volume is ${VOLUME}
 
-if [ ${DIRECTION} -eq 'up' ]; then
+if [ '${DIRECTION}' -eq 'up' ]; then
     let "VOLUME+=${VOLUME_STEP}"
-elif [ ${DIRECTION} -eq 'down' ]; then
+elif [ '${DIRECTION}' -eq 'down' ]; then
     let "VOLUME-=${VOLUME_STEP}"
 else
     echo Unknown volume change direction, please choose up or down.

@@ -16,11 +16,11 @@ echo Current volume is ${VOLUME}
 
 if [ "${DIRECTION}" = "up" ]; then
     let "VOLUME+=${VOLUME_STEP}"
-    if (( $(VOLUME) >= 101 )); then
+    if [[ ${VOLUME} -ge 101 ]]; then
         VOLUME=100
     fi
 elif [ "${DIRECTION}" = "down" ]; then
-    if (( $(VOLUME) >= 10 )); then
+    if [[ ${VOLUME} -ge 10 ]]; then
         let "VOLUME-=${VOLUME_STEP}"
     else
         VOLUME=0

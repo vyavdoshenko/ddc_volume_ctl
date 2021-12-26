@@ -6,11 +6,11 @@ if [ $# -ne 3 ]; then
     exit 1
 fi
 
-readonly VOLUME_CAPABILITY=$1
-readonly VOLUME_STEP=$2
-readonly DIRECTION=$3
+readonly local VOLUME_CAPABILITY=$1
+readonly local VOLUME_STEP=$2
+readonly local DIRECTION=$3
 
-readonly VOLUME=$(ddcutil getvcp ${VOLUME_CAPABILITY} | grep -oP '(?<=Volume level: )[0-9]+')
+local VOLUME=$(ddcutil getvcp ${VOLUME_CAPABILITY} | grep -oP '(?<=Volume level: )[0-9]+')
 
 echo Current volume is ${VOLUME}
 

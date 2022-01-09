@@ -1,0 +1,27 @@
+#+TITLE: DDC volume control using ddcutil on raspberry pi
+
+* First of all change the password for default user
+#+BEGIN_SRC sh
+passwd
+#+END_SRC
+
+* Update raspberry pi
+#+BEGIN_SRC sh
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get dist-upgrade
+#+END_SRC
+
+* Enable ssh
+
+* Enable wifi
+
+* Make IP static
+
+* Install ddcutil
+
+* Add module to autoloading
+
+* Detect monitors and options
+
+* Install git and clone repository

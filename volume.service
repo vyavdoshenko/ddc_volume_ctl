@@ -9,7 +9,8 @@ Group=pi
 Restart=always
 ExecStartPre=/usr/bin/vcgencmd display_power off
 PIDFile=/tmp/volume_service.pid
-ExecStart=/usr/bin/python3 -m http.server --directory /home/pi/ddc_volume_ctl/ --cgi 8000
+WorkingDirectory=/home/pi/ddc_volume_ctl/
+ExecStart=/usr/bin/python3 -m http.server --cgi 8000
 StandardOutput=syslog
 StandardError=syslog
 

@@ -4,8 +4,8 @@ After=network.target network-online.target syslog.target
 
 [Service]
 Type=simple
-User=nobody
-Group=nobody
+User=pi
+Group=pi
 Restart=always
 ExecStartPre=/usr/bin/vcgencmd display_power off
 PIDFile=/tmp/volume_service.pid
